@@ -1,0 +1,252 @@
+:root {
+    --bg: #f9fafb;
+    --card: #ffffff;
+    --primary: #4f46e5;
+    --text: #0f172a;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.tabelona{
+    font-size: 6px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* BANNER */
+.hero {
+    padding: 90px 20px 70px;
+    background: linear-gradient(135deg, #ccd8ff, #ffffff);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+}
+
+.hero-box {
+    max-width: 900px;
+    margin: auto;
+}
+
+.hero h1 {
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: var(--muted);
+    margin-bottom: 25px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* BOTÕES CENTRALIZADOS */
+.btn-primary,
+.btn-secondary {
+    display: block;      
+    text-align: center;
+    margin: 15px auto;   
+}
+
+/* Botão principal */
+.btn-primary {
+    background: var(--primary);
+    color: #fff;
+    padding: 18px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: .2s;
+    width: 38%;
+}
+
+
+.btn-primary:hover {
+    opacity: .9;
+}
+
+/* Botão secundário */
+.btn-secondary {
+    padding: 8px 18px;
+    border-radius: 6px;
+    background: #eef2ff;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: .9rem;
+    transition: .2s;
+}
+
+.btn-secondary:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+section {
+    margin-bottom: 80px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.sobre-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 28px;
+    border-radius: 12px;
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.project-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px;
+    cursor: pointer;
+    transition: .2s;
+    text-align: center;
+}
+
+.project-item:hover {
+    border-color: var(--primary);
+}
+
+.project-item h3 {
+    font-size: 1.1rem;
+}
+
+.project-expand {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: .3s ease;
+}
+
+.project-item.active .project-expand {
+    max-height: 600px;
+    opacity: 1;
+    margin-top: 12px;
+}
+
+.project-expand p {
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+
+/* ESTILO PARA AS IMAGENS DOS PROJETOS - PADRÃO 5% */
+.project-expand img {
+    width: 31%;
+    border-radius: 10px;
+    margin: 0 36%;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+#tab-img {
+    width: 100%;
+    margin: 0;
+}
+
+/* PERSONALIZAÇÃO INDIVIDUAL */
+.img-site-chefe { width: 40%; }
+.img-gerador-preco { width: 50%; }
+.img-site-atinuda { width: 60%; }
+.img-relatorio-troca { width: 55%; }
+.img-tabelas-receitas { width: 70%; }
+
+/* Hover opcional para todas as imagens */
+.project-expand img:hover {
+    transform: scale(1.03);  
+    filter: brightness(1.05); 
+}
+
+/* BOTÃO DE EMAIL FINAL */
+.contact-final {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.contact-final p {
+    color: var(--muted);
+    margin-bottom: 15px;
+}
+
+.contact-final a {
+    font-size: 53%;
+
+}
+
+@media (min-width: 500px) {
+.contact-final a {
+    font-size: 60%;
+}
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: var(--primary);
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 50%;
+    display: none;
+    text-decoration: none;
+}
+
+.back-to-top.show {
+    display: block;
+}
+
+.tabelona {
+    background-color: #f8f8f8;
+    padding: 1rem;
+    cursor: pointer;
+    overflow-x: auto;
+    font-family: monospace;
+    border-radius: 10px;
+    white-space: pre-wrap;
+}
+
+.tabelona:hover {
+    background-color: #e0e0e0;
+}
