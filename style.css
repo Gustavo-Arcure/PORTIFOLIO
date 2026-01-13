@@ -210,7 +210,7 @@ h2 {
 
 @media (min-width: 500px) {
     .contact-final a {
-        font-size: 63%;
+        font-size: 60%;
     }
 }
 
@@ -250,5 +250,6 @@ footer {
 .tabelona:hover {
     background-color: #e0e0e0;
 }
+
 
 
